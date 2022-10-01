@@ -1,0 +1,29 @@
+//Reverse the array (Integer or String)
+
+#include <iostream>
+
+using namespace std;
+
+void reverseInterger(int arr[],int n){
+    int temp;
+    int start=arr[0];
+    int end=arr[n-1];
+    while(start<end){
+        temp=start;
+        start=end;
+        end=temp;
+        start++;end--;
+    }
+    
+}
+
+int main(){
+    int n;
+    std::cin>>n;
+    int arr[n];
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    std::cout << reverseInterger(arr,n);
+    return 0;
+}
